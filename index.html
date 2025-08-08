@@ -543,8 +543,36 @@
     </section>
 
     <!-- Külalise ABC -->
-    <section class="py-20 sm:py-32 bg-amber-50">
-      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+    <section class="py-20 sm:py-32 bg-amber-50 relative">
+      <!-- Historical castle collage - Monroe style -->
+      <div class="absolute inset-0 opacity-30">
+        <div class="grid grid-cols-2 grid-rows-2 w-full h-full">
+          <!-- Top left - amber tint -->
+          <div class="relative overflow-hidden">
+            <img src="/Glehni_loss_ajalugu.png" alt="Glehni lossi ajalooline pilt" class="w-full h-full object-cover" style="object-position: center 20%">
+            <div class="absolute inset-0 bg-amber-600/60"></div>
+          </div>
+          <!-- Top right - red tint -->
+          <div class="relative overflow-hidden">
+            <img src="/Glehni_loss_ajalugu.png" alt="Glehni lossi ajalooline pilt" class="w-full h-full object-cover" style="object-position: center 20%">
+            <div class="absolute inset-0 bg-red-800/60"></div>
+          </div>
+          <!-- Bottom left - brown tint -->
+          <div class="relative overflow-hidden">
+            <img src="/Glehni_loss_ajalugu.png" alt="Glehni lossi ajalooline pilt" class="w-full h-full object-cover" style="object-position: center 20%">
+            <div class="absolute inset-0 bg-yellow-800/60"></div>
+          </div>
+          <!-- Bottom right - burgundy tint -->
+          <div class="relative overflow-hidden">
+            <img src="/Glehni_loss_ajalugu.png" alt="Glehni lossi ajalooline pilt" class="w-full h-full object-cover" style="object-position: center 20%">
+            <div class="absolute inset-0 bg-red-900/60"></div>
+          </div>
+        </div>
+        <!-- Overall amber-50 overlay to keep the section tone -->
+        <div class="absolute inset-0 bg-amber-50/70"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl relative z-10">
         <h2 class="font-display text-3xl sm:text-4xl text-center text-slate-900">Külalise Meelespea</h2>
         <div class="mt-8 space-y-6 text-slate-700 text-lg">
           <p><strong>Parkimine:</strong> Lossi juures on parkimiskohti piiratud arvul, kuid just neile, kes seda kõige rohkem vajavad. Parkimisvõimaluste osas saadan eraldi kirja välja enne üritust.</p>

@@ -40,6 +40,44 @@
     body {
       font-family: var(--font-body);
     }
+    
+    /* Papüüruse hõljumine */
+    @keyframes gentleFloat {
+      0%, 100% { 
+        transform: translateY(-10px) rotate(0deg);
+        box-shadow: 
+          0 20px 40px rgba(0,0,0,0.4),
+          0 10px 20px rgba(0,0,0,0.2),
+          0 5px 10px rgba(0,0,0,0.1);
+      }
+      25% { 
+        transform: translateY(-15px) rotate(0.5deg);
+        box-shadow: 
+          0 25px 50px rgba(0,0,0,0.5),
+          0 15px 25px rgba(0,0,0,0.25),
+          0 8px 15px rgba(0,0,0,0.15);
+      }
+      50% { 
+        transform: translateY(-5px) rotate(0deg);
+        box-shadow: 
+          0 15px 30px rgba(0,0,0,0.3),
+          0 8px 15px rgba(0,0,0,0.15),
+          0 3px 8px rgba(0,0,0,0.08);
+      }
+      75% { 
+        transform: translateY(-12px) rotate(-0.5deg);
+        box-shadow: 
+          0 22px 45px rgba(0,0,0,0.45),
+          0 12px 22px rgba(0,0,0,0.22),
+          0 6px 12px rgba(0,0,0,0.12);
+      }
+    }
+    
+    .papyrus-float:hover {
+      animation-play-state: paused;
+      transform: translateY(-12px) scale(1.02);
+      transition: transform 0.3s ease;
+    }
   </style>
 </head>
 <body class="flex h-full flex-col bg-slate-50 text-slate-800 antialiased" style="background-color: #FFF8E1;">
@@ -54,8 +92,8 @@
           Üks õhtu. Üks loss. <br class="hidden sm:block"> Üks mälestus, mis jääb.
         </h1>
         <div class="mt-12 text-lg max-w-2xl mx-auto font-light leading-relaxed">
-          <p>Armas kallis elu kaaslane</p>
-          <p class="mt-4">See on kutse Sulle. Mitte lihtsalt peole, vaid rännakule läbi aja ja tunnete, Glehni lossi väärikate müüride vahele, kus küünlavalgus tantsib varjudega ja iga hetk on kui pärl. See on õhtu, kus kohtuvad mineviku sosinad ja tuleviku unistused, kus aeg peatub, et saaksime olla lihtsalt meie. Tule ja loo see mälestus koos minuga.</p>
+          <p>Armas kallis kaaskulgeja kõrvalkuningriigist!</p>
+          <p class="mt-4">See on kutse Sulle. Mitte lihtsalt peole, vaid rännakule läbi aja, Glehni väärikate müüride vahele, kus küünlavalgus tantsib varjudega ja iga hetk on kui muinasjutt. See on õhtu, kus kohtuvad mineviku sosinad ja tuleviku unistused; Aeg peatub, et meie saaksime olla lihtsalt meie. Tule ja loo see mälestus koos minuga.</p>
         </div>
       </div>
     </section>
@@ -66,24 +104,314 @@
         <h2 class="font-display text-3xl text-amber-900">Sündmuseni on jäänud:</h2>
         <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto text-amber-900">
           <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
-            <span x-text="days" class="text-4xl sm:text-5xl font-bold"></span>
+            <span x-text="days" class="text-3xl sm:text-4xl font-bold"></span>
             <span class="block text-sm text-kuldne">päeva</span>
           </div>
           <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
-            <span x-text="hours" class="text-4xl sm:text-5xl font-bold"></span>
+            <span x-text="hours" class="text-3xl sm:text-4xl font-bold"></span>
             <span class="block text-sm text-kuldne">tundi</span>
           </div>
           <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
-            <span x-text="minutes" class="text-4xl sm:text-5xl font-bold"></span>
+            <span x-text="minutes" class="text-3xl sm:text-4xl font-bold"></span>
             <span class="block text-sm text-kuldne">minutit</span>
           </div>
           <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
-            <span x-text="seconds" class="text-4xl sm:text-5xl font-bold"></span>
+            <span x-text="seconds" class="text-3xl sm:text-4xl font-bold"></span>
             <span class="block text-sm text-kuldne">sekundit</span>
           </div>
         </div>
-        <div class="mt-12 max-w-3xl mx-auto">
+        <div class="mt-12 max-w-2xl mx-auto mb-8">
           <img src="/Lossipidu_pilt.png" alt="Ajaloolised kleidid" class="rounded-lg shadow-xl w-full h-auto" style="filter: brightness(1.1);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Juubilari läkitus -->
+    <section class="py-16 relative overflow-hidden" style="background: linear-gradient(135deg, #722F37 0%, #8B0000 50%, #722F37 100%);">
+      <!-- Kuninglikud kardinad -->
+      <div class="absolute inset-0">
+        <!-- Ülaosa kardinate kinnitused -->
+        <div class="absolute top-0 left-0 right-0 h-12" style="
+          background: linear-gradient(to bottom,
+            #8B4513 0%,
+            #A0522D 100%
+          );
+          border-bottom: 3px solid #DAA520;
+        "></div>
+        
+        <!-- Kogu taust kardinatega -->
+        <div class="absolute inset-0 top-12" style="
+          background: linear-gradient(45deg, 
+            #722F37 0%,
+            #8B0000 15%,
+            #A0522D 30%,
+            #722F37 45%,
+            #8B0000 60%,
+            #A0522D 75%,
+            #722F37 100%
+          );
+        ">
+          <!-- Burgundia muster -->
+          <div class="absolute inset-0" style="
+            background-image: 
+              radial-gradient(circle at 30% 40%, rgba(218,165,32,0.3) 2px, transparent 2px),
+              radial-gradient(circle at 70% 70%, rgba(218,165,32,0.2) 1px, transparent 1px),
+              repeating-linear-gradient(45deg, 
+                transparent 0px, 
+                rgba(139,0,0,0.4) 8px, 
+                transparent 16px
+              );
+            background-size: 40px 40px, 25px 25px, 20px 20px;
+          "></div>
+          <!-- Sügavad voldid -->
+          <div class="absolute inset-0" style="
+            background: repeating-linear-gradient(to right,
+              rgba(0,0,0,0.2) 0px,
+              transparent 12px,
+              rgba(0,0,0,0.1) 24px,
+              transparent 36px,
+              rgba(0,0,0,0.3) 48px,
+              transparent 60px
+            );
+          "></div>
+        </div>
+        
+        <!-- Vasak kardin (ainult serv) -->
+        <div class="absolute left-0 top-12 h-full" style="
+          width: 40%;
+          background: linear-gradient(45deg, 
+            #722F37 0%,
+            #8B0000 15%,
+            #A0522D 30%,
+            #722F37 45%,
+            #8B0000 60%,
+            #A0522D 75%,
+            #722F37 100%
+          );
+          clip-path: polygon(0 0, 90% 0, 70% 100%, 0 100%);
+          box-shadow: 
+            inset -15px 0 30px rgba(0,0,0,0.5),
+            8px 0 25px rgba(0,0,0,0.4);
+        ">
+          <!-- Burgundia muster -->
+          <div class="absolute inset-0" style="
+            background-image: 
+              radial-gradient(circle at 30% 40%, rgba(218,165,32,0.3) 2px, transparent 2px),
+              radial-gradient(circle at 70% 70%, rgba(218,165,32,0.2) 1px, transparent 1px),
+              repeating-linear-gradient(45deg, 
+                transparent 0px, 
+                rgba(139,0,0,0.4) 8px, 
+                transparent 16px
+              );
+            background-size: 40px 40px, 25px 25px, 20px 20px;
+          "></div>
+          <!-- Sügavad voldid -->
+          <div class="absolute inset-0" style="
+            background: repeating-linear-gradient(to right,
+              rgba(0,0,0,0.3) 0px,
+              transparent 12px,
+              rgba(0,0,0,0.2) 24px,
+              transparent 36px,
+              rgba(0,0,0,0.4) 48px,
+              transparent 60px
+            );
+          "></div>
+        </div>
+        
+        <!-- Parem kardin (ainult serv) -->
+        <div class="absolute right-0 top-12 h-full" style="
+          width: 40%;
+          background: linear-gradient(-45deg, 
+            #722F37 0%,
+            #8B0000 15%,
+            #A0522D 30%,
+            #722F37 45%,
+            #8B0000 60%,
+            #A0522D 75%,
+            #722F37 100%
+          );
+          clip-path: polygon(10% 0, 100% 0, 100% 100%, 30% 100%);
+          box-shadow: 
+            inset 15px 0 30px rgba(0,0,0,0.5),
+            -8px 0 25px rgba(0,0,0,0.4);
+        ">
+          <!-- Burgundia muster -->
+          <div class="absolute inset-0" style="
+            background-image: 
+              radial-gradient(circle at 30% 40%, rgba(218,165,32,0.3) 2px, transparent 2px),
+              radial-gradient(circle at 70% 70%, rgba(218,165,32,0.2) 1px, transparent 1px),
+              repeating-linear-gradient(-45deg, 
+                transparent 0px, 
+                rgba(139,0,0,0.4) 8px, 
+                transparent 16px
+              );
+            background-size: 40px 40px, 25px 25px, 20px 20px;
+          "></div>
+          <!-- Sügavad voldid -->
+          <div class="absolute inset-0" style="
+            background: repeating-linear-gradient(to left,
+              rgba(0,0,0,0.3) 0px,
+              transparent 12px,
+              rgba(0,0,0,0.2) 24px,
+              transparent 36px,
+              rgba(0,0,0,0.4) 48px,
+              transparent 60px
+            );
+          "></div>
+        </div>
+        
+      </div>
+      
+      <!-- Sisu -->
+      <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <div class="max-w-4xl mx-auto flex justify-center relative">
+          
+          <!-- Astra pilt vasakul servalt "hoidmas" papüüruse äärt -->
+          <div class="absolute -top-4 -left-8 z-5 opacity-75">
+            <div class="relative">
+              <img src="/Astra_kleidiga.png" alt="Astra" class="w-32 h-auto" style="
+                filter: sepia(15%) brightness(0.95) contrast(1.1);
+                transform: rotate(-5deg);
+                border-radius: 6px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+              ">
+              
+            </div>
+          </div>
+          
+          <!-- Papüüruse rull -->
+          <div class="relative papyrus-float z-20" style="
+            background: linear-gradient(135deg, 
+              #F4E4BC 0%, 
+              #E8D5A3 10%, 
+              #F4E4BC 20%, 
+              #DCC896 30%, 
+              #F4E4BC 40%, 
+              #E8D5A3 50%, 
+              #F4E4BC 60%, 
+              #DCC896 70%, 
+              #F4E4BC 80%, 
+              #E8D5A3 90%, 
+              #F4E4BC 100%
+            );
+            padding: 40px 50px;
+            border-radius: 8px;
+            box-shadow: 
+              0 20px 40px rgba(0,0,0,0.4),
+              0 10px 20px rgba(0,0,0,0.2),
+              0 5px 10px rgba(0,0,0,0.1),
+              inset 0 1px 0 rgba(255,255,255,0.3),
+              inset 0 -1px 0 rgba(0,0,0,0.1);
+            border: 2px solid #D4AF37;
+            max-width: 600px;
+            position: relative;
+            transform: translateY(-10px);
+            animation: gentleFloat 6s ease-in-out infinite;
+          ">
+            <!-- Papüüruse tekstuur -->
+            <div class="absolute inset-0 rounded-lg opacity-30" style="
+              background-image: 
+                repeating-linear-gradient(45deg, 
+                  transparent 0px, 
+                  rgba(139,69,19,0.1) 1px, 
+                  transparent 2px, 
+                  transparent 15px
+                ),
+                repeating-linear-gradient(-45deg, 
+                  transparent 0px, 
+                  rgba(160,82,45,0.08) 1px, 
+                  transparent 2px, 
+                  transparent 12px
+                ),
+                radial-gradient(circle at 20% 30%, rgba(139,69,19,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(160,82,45,0.08) 1px, transparent 1px);
+              background-size: 30px 30px, 25px 25px, 15px 15px, 20px 20px;
+            "></div>
+            
+            <!-- Papüüruse servad - vanaaegsed kulunud servad -->
+            <div class="absolute -left-1 -top-1 w-2 h-full rounded-l-lg" style="
+              background: linear-gradient(to bottom, 
+                #CD853F 0%, 
+                #DEB887 20%, 
+                #CD853F 40%, 
+                #DEB887 60%, 
+                #CD853F 80%, 
+                #DEB887 100%
+              );
+              box-shadow: inset -2px 0 4px rgba(0,0,0,0.2);
+            "></div>
+            <div class="absolute -right-1 -top-1 w-2 h-full rounded-r-lg" style="
+              background: linear-gradient(to bottom, 
+                #CD853F 0%, 
+                #DEB887 20%, 
+                #CD853F 40%, 
+                #DEB887 60%, 
+                #CD853F 80%, 
+                #DEB887 100%
+              );
+              box-shadow: inset 2px 0 4px rgba(0,0,0,0.2);
+            "></div>
+            
+            <!-- Sisu -->
+            <div class="relative z-10">
+              <h2 class="font-display text-3xl mb-8 text-center" style="
+                color: #8B4513;
+                background: linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #8B4513 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-shadow: 
+                  2px 2px 0px #CD853F,
+                  4px 4px 8px rgba(0,0,0,0.3),
+                  inset 0px 0px 3px rgba(218,165,32,0.5);
+                text-stroke: 1px #8B4513;
+                -webkit-text-stroke: 1px #8B4513;
+              ">
+                ✦ Juubilari läkitus ✦
+              </h2>
+              
+              <div class="text-base text-amber-900 leading-relaxed space-y-5 font-serif" style="text-align: justify; line-height: 1.8;">
+                <p class="relative">
+                  <span class="float-left mr-3 mb-1" style="
+                    font-size: 5rem;
+                    line-height: 0.8;
+                    font-weight: bold;
+                    color: #8B4513;
+                    text-shadow: 
+                      2px 2px 0px #CD853F,
+                      4px 4px 8px rgba(0,0,0,0.3),
+                      inset 0px 0px 3px rgba(218,165,32,0.5);
+                    font-family: 'Cormorant Garamond', serif;
+                    background: linear-gradient(135deg, #B8860B 0%, #DAA520 50%, #8B4513 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-stroke: 1px #8B4513;
+                    -webkit-text-stroke: 1px #8B4513;
+                    position: relative;
+                    display: inline-block;
+                    margin-top: 0.3rem;
+                  ">S</span>ee läkitus on just Sulle, hea kaasteeline, olgu Su kuningriik siin- või sealpool piiri. Oled jätnud minu elurajale oma heleda jälje ja tänu Sinule olen sirgunud just selliseks, nagu olen – unistav, ent edasipüüdlik, tuultest kantud, kuid siiski kindlameelne.
+                </p>
+                <p>
+                  Meie ühised hetked, olgu need möödunud eile või aastakümnete eest, on kui kalliskivid mälestuste laekas. Ma tänan Sind selle eest südamest. Soovin, et sel õhtul saaksime üheskoos tähistada olemise ilu ja põimida sellest mälestuse, mis heliseb veel kaua.
+                </p>
+              </div>
+              
+              <!-- Vanaaegne allkiri -->
+              <div class="mt-8 text-center space-y-3">
+                <div class="text-base text-amber-800 font-serif">
+                  Sügava austusega
+                </div>
+                <div class="text-lg font-display text-amber-800 font-bold">
+                  ~ Astra ~
+                </div>
+                <div class="text-sm text-amber-700 italic font-serif mt-2">
+                  Tallinna lähistel, Augusti kuul
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="et" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Astra 40 Lossipidu Stiilikas - Glehni Lossis - Üks õhtu, mis jääb meelde</title>
+  <meta name="description" content="Kutse erilisele õhtusündmusele Glehni lossis. See ei ole tavaline pidu, vaid aasta kõige ilusam ja unikaalsem õhtu, mis jääb külalistele meelde kui midagi erilist.">
+  
+  <meta property="og:title" content="Glehni Lossipidu - Üks õhtu, mis jääb meelde">
+  <meta property="og:description" content="Kutse erilisele õhtusündmusele Glehni lossis.">
+  <meta property="og:image" content="/images/Lossipidu_pilt.png">
+  <meta property="og:url" content="https://your-event-page.com">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/src/main.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    :root {
+      --kuldne: #D4AF37;
+      --heleroosa: #FADADD;
+      --heleroheline: #D1E7DD;
+      --tumepunane: #8B0000;
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body: 'Lora', serif;
+    }
+    .bg-kuldne { background-color: var(--kuldne); }
+    .text-kuldne { color: var(--kuldne); }
+    .bg-heleroosa { background-color: var(--heleroosa); }
+    .bg-heleroheline { background-color: var(--heleroheline); }
+    .bg-tumepunane { background-color: var(--tumepunane); }
+    .font-display { font-family: var(--font-display); }
+    body {
+      font-family: var(--font-body);
+    }
+  </style>
+</head>
+<body class="flex h-full flex-col bg-slate-50 text-slate-800 antialiased" style="background-color: #FFF8E1;">
+
+  <main class="flex-auto">
+    
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('/Glehni_loss.png');">
+      <div class="absolute inset-0 bg-black/30" style="background-image: linear-gradient(to top, rgba(212, 175, 55, 0.2), transparent 50%);"></div>
+      <div class="relative z-10 p-4 text-white">
+        <h1 class="font-display text-4xl sm:text-6xl md:text-7xl leading-tight tracking-wider" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.6);">
+          Üks õhtu. Üks loss. <br class="hidden sm:block"> Üks mälestus, mis jääb.
+        </h1>
+        <div class="mt-12 text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          <p>Armas kallis elukaaslane,</p>
+          <p class="mt-4">see on kutse Sulle. Mitte lihtsalt peole, vaid rännakule läbi aja ja tunnete, Glehni iidsete müüride vahele, kus küünlavalgus tantsib varjudega ja iga hetk on kui pärl. See on õhtu, kus kohtuvad mineviku sosinad ja tuleviku unistused, kus aeg peatub, et saaksime olla lihtsalt meie. Tule ja loo see mälestus koos minuga.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="py-12 sm:py-20" style="background-color: #FAF3E0; background-image: url('data:image/svg+xml,%3Csvg width=\'150\' height=\'150\' viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M100 50 C108 50, 108 58, 100 58 C92 58, 92 50, 100 50 Z M100 58 C100 62, 96 64, 96 68 L104 68 C104 64, 100 62, 100 58 Z M96 68 L96 88 L104 88 L104 68 Z M92 88 C92 92, 96 92, 96 88 Z M108 88 C108 92, 104 92, 104 88 Z M92 92 L108 92 L108 96 L92 96 Z M96 96 L104 96 L104 100 L96 100 Z M100 100 C96 100, 92 104, 92 108 L108 108 C108 104, 104 100, 100 100 Z M92 108 L92 112 L108 112 L108 108 Z M96 112 L104 112 L104 142 L96 142 Z M92 142 L108 142 L108 146 L92 146 Z M96 146 L104 146 L104 150 L96 150 Z M100 150 C96 150, 92 154, 92 158 L108 158 C108 154, 104 150, 100 150 Z\' fill=\'rgba(180, 140, 50, 0.15)\'%3E%3C/path%3E%3C/svg%3E'); background-repeat: repeat; background-size: 150px 150px;" x-data="countdown()" x-init="init()">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-display text-3xl text-amber-900">Sündmuseni on jäänud:</h2>
+        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto text-amber-900">
+          <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
+            <span x-text="days" class="text-4xl sm:text-5xl font-bold"></span>
+            <span class="block text-sm text-kuldne">päeva</span>
+          </div>
+          <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
+            <span x-text="hours" class="text-4xl sm:text-5xl font-bold"></span>
+            <span class="block text-sm text-kuldne">tundi</span>
+          </div>
+          <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
+            <span x-text="minutes" class="text-4xl sm:text-5xl font-bold"></span>
+            <span class="block text-sm text-kuldne">minutit</span>
+          </div>
+          <div class="p-4 rounded-lg bg-white/20 backdrop-blur-sm shadow-lg border border-white/30">
+            <span x-text="seconds" class="text-4xl sm:text-5xl font-bold"></span>
+            <span class="block text-sm text-kuldne">sekundit</span>
+          </div>
+        </div>
+        <div class="mt-12 max-w-3xl mx-auto">
+          <img src="/Lossipidu_pilt.png" alt="Ajaloolised kleidid" class="rounded-lg shadow-xl w-full h-auto" style="filter: brightness(1.1);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Ajakava -->
+    <section class="py-10 sm:py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">Õhtu kulg</h2>
+          <p class="mt-4 text-lg text-slate-700">Hetked, mis ootavad meid ees küünlavalguse ja muusika saatel.</p>
+        </div>
+        <div class="mt-16 relative">
+          <div class="absolute left-1/2 h-full w-px bg-slate-300"></div>
+          <div class="space-y-12">
+            <div class="relative flex items-center">
+              <div class="w-1/2 pr-8 text-right">
+                <p class="font-bold text-lg text-amber-900">16:00</p>
+                <h3 class="text-xl font-semibold text-slate-800">Snäkid ja jalutuskäik</h3>
+                <p class="text-slate-600">Avame lossi uksed ja laseme end kanda esimesest lummavast hetkest.</p>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-kuldne ring-8 ring-white"></div>
+            </div>
+            <div class="relative flex items-center">
+              <div class="w-1/2 pr-8"></div>
+              <div class="w-1/2 pl-8 text-left">
+                <p class="font-bold text-lg text-amber-900">18:00</p>
+                <h3 class="text-xl font-semibold text-slate-800">Pildistamine</h3>
+                <p class="text-slate-600">Püüame hetke ilu ja sära seal, kus kleidisabad ja naeratused</p>
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-kuldne ring-8 ring-white"></div>
+            </div>
+            <div class="relative flex items-center">
+              <div class="w-1/2 pr-8 text-right">
+                <p class="font-bold text-lg text-amber-900">19:00</p>
+                <h3 class="text-xl font-semibold text-slate-800">Õhtusöök</h3>
+                <p class="text-slate-600">Naudime maitseid, mis on loodud spetsiaalselt selleks õhtuks.</p>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-kuldne ring-8 ring-white"></div>
+            </div>
+            <div class="relative flex items-center">
+              <div class="w-1/2 pr-8"></div>
+              <div class="w-1/2 pl-8 text-left">
+                <p class="font-bold text-lg text-amber-900">20:00</p>
+                <h3 class="text-xl font-semibold text-slate-800">Magustoit ja kontsert 1</h3>
+                <p class="text-slate-600">Magusad noodid nii taldrikul kui ka laval.</p>
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-kuldne ring-8 ring-white"></div>
+            </div>
+            <div class="relative flex items-center">
+              <div class="w-1/2 pr-8 text-right">
+                <p class="font-bold text-lg text-amber-900">21:00</p>
+                <h3 class="text-xl font-semibold text-slate-800">Kontsert 2</h3>
+                <p class="text-slate-600">Muusika, mis puudutab hinge ja viib rändama.</p>
+              </div>
+              <div class="w-1/2 pl-8"></div>
+              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-kuldne ring-8 ring-white"></div>
+            </div>
+            <div class="relative flex items-center">
+              <div class="w-1/2 pr-8"></div>
+              <div class="w-1/2 pl-8 text-left">
+                <p class="font-bold text-lg text-amber-900">22:00–00:00</p>
+                <h3 class="text-xl font-semibold text-slate-800">Tants, romantika, vaba lava</h3>
+                <p class="text-slate-600">Öö on meie päralt – täis tantsukeeriseid ja ootamatuid hetki.</p>
+              </div>
+              <div class="absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-kuldne ring-8 ring-white"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stiiligalerii -->
+    <section class="py-20 sm:py-32 bg-amber-50" style="background-image: url('data:image/svg+xml,%3Csvg width=\'150\' height=\'150\' viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M100 50 C108 50, 108 58, 100 58 C92 58, 92 50, 100 50 Z M100 58 C100 62, 96 64, 96 68 L104 68 C104 64, 100 62, 100 58 Z M96 68 L96 88 L104 88 L104 68 Z M92 88 C92 92, 96 92, 96 88 Z M108 88 C108 92, 104 92, 104 88 Z M92 92 L108 92 L108 96 L92 96 Z M96 96 L104 96 L104 100 L96 100 Z M100 100 C96 100, 92 104, 92 108 L108 108 C108 104, 104 100, 100 100 Z M92 108 L92 112 L108 112 L108 108 Z M96 112 L104 112 L104 142 L96 142 Z M92 142 L108 142 L108 146 L92 146 Z M96 146 L104 146 L104 150 L96 150 Z M100 150 C96 150, 92 154, 92 158 L108 158 C108 154, 104 150, 100 150 Z\' fill=\'rgba(180, 140, 50, 0.15)\'%3E%3C/path%3E%3C/svg%3E'); background-repeat: repeat; background-size: 150px 150px;">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900">Tule nagu Sina – ja lisa killuke ajastuhõngu</h2>
+          <p class="mt-4 text-lg text-slate-700">Lase fantaasial lennata. Olgu see vintage-kleit, uhke parukas, kikilips või lihtsalt sära silmis. See on Sinu võimalus särada.</p>
+        </div>
+        <div class="mt-16 max-w-2xl mx-auto">
+          <img src="/Astra 40 org.jpeg" alt="Astra 40" class="rounded-lg shadow-xl w-full h-auto">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mida kaasa võtta -->
+    <section class="py-20 sm:py-32">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+        <div class="max-w-xl">
+          <h2 class="font-display text-3xl sm:text-4xl text-slate-900">Kingituseks on armas meelespidamine umbes sellisel viisil...</h2>
+          <ul class="mt-6 space-y-4 text-lg text-slate-700">
+            <li class="flex items-start"><span class="text-kuldne mr-3 mt-1">✔</span> ...Naeratus ja see, et oled kohale tulnud!</li>
+            <li class="flex items-start"><span class="text-kuldne mr-3 mt-1">✔</span> ...kui soovid lillega tähistada, siis üks punane roos sobib hästi! Või istutatav taim, mis jõuab siis minu akna alla.</li>
+            <li class="flex items-start"><span class="text-kuldne mr-3 mt-1">✔</span> ...peo toredamaks õnnestumiseks on kõige suurem kingitus armas ümbrik, mis aitab meil katta peo eelarvet. </li>
+          </ul>
+        </div>
+        <div class="max-w-xl">
+           <h2 class="font-display text-3xl sm:text-4xl text-slate-900">Kas peaks riietuse pärast muretsema? Kas peaks mõtlema, et ahhh, me ei tunne seal ju kedagi ning ehk on üldsegi igav!</h2>
+          <ul class="mt-6 space-y-4 text-lg text-slate-700">
+            <li class="flex items-start"><span class="text-amber-900 mr-3 mt-1">✘</span> Ära muretse riietuse pärst – Sul on võimalus rentida kuninga või printsessi kostüüm, Peeter Paani kostüüm vms, aga võid tulla ka galantses õhtukleidis või lihtsalt pidulikus särgis või ülikonnas. Tähista enda sära!</li>
+            <li class="flex items-start"><span class="text-amber-900 mr-3 mt-1">✘</span> Kohale tuleb üksjagu muusikuid, ettevõtjaid, emasid, isasid, teadlasi, noori, kunstnikke ja IT-inimesi. Kontsert ja eritellimusel toit, ilus interjöör ja väline loodus annab headele naljadele ja koos oma kaaslasega hea õhtu veetmisele mõnusa turvalise eelduse. :) </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Külalise ABC -->
+    <section class="py-20 sm:py-32 bg-amber-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+        <h2 class="font-display text-3xl sm:text-4xl text-center text-slate-900">Külalise Meelespea</h2>
+        <div class="mt-8 space-y-6 text-slate-700 text-lg">
+          <p><strong>Parkimine:</strong> Lossi juures on parkimiskohti piiratud arvul, kuid just neile, kes seda kõige rohkem vajavad. Parkimisvõimaluste osas saadan eraldi kirja välja enne üritust.</p>
+          <p><strong>Toidueelistused:</strong> Püüame kinni Sinu ja Sinu kaaslase toidueelistuse registreerimisvormi kaudu!</p>
+          <p><strong>Saabumine:</strong> Soovitame saabuda kell 16:00, et saaksid nautida kogu õhtu maagiat alates esimestest suupistetest kuni viimaste tantsusammudeni. Kui aga saad tulla alles kella 18-ks või 19-ks, siis on samuti õhtu veel noor! </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RSVP -->
+    <section class="bg-amber-900 text-white py-20 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
+        <h2 class="font-display text-3xl sm:text-4xl">Anna oma tulekust teada</h2>
+        <p class="mt-4 text-lg text-heleroosa">Aita meil peoks valmistuda – anna teada, kas tuled ja kellega. Sinu vastus aitab meil luua õhtu, kus asjad jooksevad iseenesest.</p>
+        <a href="https://forms.gle/a77DpbeCKTkoV9LQ9" target="_blank" class="mt-8 inline-block rounded-full bg-white px-10 py-4 text-lg font-semibold text-red-900 hover:bg-amber-100 transition-colors">
+          Registreeru siin
+        </a>
+      </div>
+    </section>
+
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-slate-50/50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-slate-600">
+      <div class="flex justify-center items-center mb-4">
+        <p>Küsimuste korral kirjuta: Astraada@gmail.com</p>
+      </div>
+      <p class="text-sm text-slate-500">
+        &copy; <span x-text="new Date().getFullYear()"></span> Astra 40 Lossipidu. Loodud südamega.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    function countdown() {
+      return {
+        // Set the date for the event: August 19, 2025 16:00:00
+        eventDate: new Date("2025-08-19T16:00:00").getTime(),
+        days: '00',
+        hours: '00',
+        minutes: '00',
+        seconds: '00',
+        init() {
+          this.updateCountdown();
+          setInterval(() => {
+            this.updateCountdown();
+          }, 1000);
+        },
+        updateCountdown() {
+          const now = new Date().getTime();
+          const distance = this.eventDate - now;
+
+          if (distance < 0) {
+            this.days = '00';
+            this.hours = '00';
+            this.minutes = '00';
+            this.seconds = '00';
+            return;
+          }
+
+          this.days = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+          this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+          this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+          this.seconds = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+        }
+      }
+    }
+  </script>
+</body>
+</html>

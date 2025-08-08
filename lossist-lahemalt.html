@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="et" class="h-full scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Lossist lähemalt - Glehni Lossipidu</title>
+  <meta name="description" content="Lisainfo Glehni lossi ajaloo ja tausta kohta.">
+  
+  <meta property="og:title" content="Lossist lähemalt - Glehni Lossipidu">
+  <meta property="og:description" content="Lisainfo Glehni lossi ajaloo ja tausta kohta.">
+  <meta property="og:image" content="/images/Glehni_loss.png">
+  <meta property="og:url" content="https://your-event-page.com/lossist-lahemalt.html">
+  <meta property="og:type" content="website">
+  
+  <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/src/main.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <style>
+    :root {
+      --kuldne: #D4AF37;
+      --heleroosa: #FADADD;
+      --heleroheline: #D1E7DD;
+      --tumepunane: #8B0000;
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body: 'Lora', serif;
+    }
+    .bg-kuldne { background-color: var(--kuldne); }
+    .text-kuldne { color: var(--kuldne); }
+    .bg-heleroosa { background-color: var(--heleroosa); }
+    .bg-heleroheline { background-color: var(--heleroheline); }
+    .bg-tumepunane { background-color: var(--tumepunane); }
+    .font-display { font-family: var(--font-display); }
+    body {
+      font-family: var(--font-body);
+    }
+  </style>
+</head>
+<body class="flex h-full flex-col bg-slate-50 text-slate-800 antialiased" style="background-color: #FFF8E1;">
+
+  <header class="py-10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="relative z-50 flex justify-between" x-data="{ mobileMenuOpen: false }">
+        <div class="flex items-center md:gap-x-12">
+          <a href="/index.html" aria-label="Home" class="flex items-center">
+            <span class="font-display text-2xl font-bold text-slate-900">Astra 40 Lossipidu</span>
+          </a>
+          <div class="hidden md:flex md:gap-x-6">
+            <a href="/lossist-lahemalt.html" class="inline-block rounded-lg px-2 py-1 text-sm text-slate-700 hover:bg-slate-100 hover:text-slate-900">Lossist lähemalt</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-x-5 md:gap-x-8">
+          <div class="-mr-1 md:hidden">
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="relative z-10 flex h-8 w-8 items-center justify-center">
+              <svg class="h-3.5 w-3.5 overflow-visible stroke-slate-700" fill="none" stroke-width="2" stroke-linecap="round">
+                <path d="M0 1H14M0 7H14M0 13H14" :class="mobileMenuOpen && 'scale-90 opacity-0'" class="origin-center transition"></path>
+                <path d="M2 2L12 12M12 2L2 12" :class="!mobileMenuOpen && 'scale-90 opacity-0'" class="origin-center transition"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div x-show="mobileMenuOpen" 
+             x-transition:enter="transition ease-out duration-150"
+             x-transition:enter-start="opacity-0 scale-95"
+             x-transition:enter-end="opacity-100 scale-100"
+             x-transition:leave="transition ease-in duration-100"
+             x-transition:leave-start="opacity-100 scale-100"
+             x-transition:leave-end="opacity-0 scale-95"
+             @click.away="mobileMenuOpen = false"
+             class="absolute inset-x-0 top-full mt-4 flex origin-top flex-col rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5 md:hidden">
+          <a href="/lossist-lahemalt.html" @click="mobileMenuOpen = false" class="block w-full p-2">Lossist lähemalt</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="flex-auto container mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+    <h1 class="font-display text-4xl sm:text-5xl text-slate-900 text-center mb-8">Glehni loss</h1>
+    <div class="max-w-3xl mx-auto text-lg leading-relaxed">
+      <img src="/Glehni_loss.png" alt="Glehni loss" class="rounded-lg shadow-xl w-full h-auto mb-8">
+      <p class="mb-4">Lossi projekti tegi Nikolai von Glehn ise, ehitajateks olid Tallinna vanglast lepingu alusel suunatud vangid. Keskaegse rüütlilossi stiilis ehitis valmis 1. oktoobril 1886 ja sai nimeks Kõrgepea (Hohenhaupt). Niisugust kohta mainitakse siin, Mustamäe nõlval juba 1371. aastal koostatud alamsaksakeelses ürikus, millega ordumeister Wilhelm von Vriemersheim määrab Tallinna sarase piiri – van der hoge enes berges, de dat hoge hoved genomet is. (Ühe mäe tipp, mida nimetatakse Kõrgepeaks).</p>
+      <p class="mb-4">Kõrgepeast kavatseti kujundada eelkõige karjamõis, kuigi kari oli väike, ainult kümmekond lehma, kelle eest hoolitsesid karjatüdrukud Glehni abikaasa Carolina Henriette Marie (sünd Berg) juhtimisel.</p>
+      <p>Samas tekkis ka üks väike probleem, mille Glehn lahendas ehtglehnilikult. Nimelt ei kuulunud maatükk lossi kõrval mäekallakul ja selle all mitte temale, vaid hoopis Harku mõisale. Nii sõlmiski ta 1889. aastal Harku mõisniku parun Robert von Ungern-Sternbergiga tehingu: Jälgimäe mõisast liideti 224 tiinu suurune tükk Harku mõisaga ja Glehn sai soovitud 25 tiinu suuruse maatüki maa Mustamäe kallaku all. (1 tiin (tessatin) = 2400 ruutsülda = 10 925 m² LL)</p>
+    </div>
+  </main>
+
+  <footer class="bg-slate-50/50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center text-slate-600">
+      <div class="flex justify-center items-center mb-4">
+        <p>Küsimuste korral kirjuta: Astraada@gmail.com</p>
+      </div>
+      <p class="text-sm text-slate-500">
+        &copy; <span x-text="new Date().getFullYear()"></span> Astra 40 Lossipidu. Loodud südamega.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
